@@ -1,0 +1,16 @@
+* {
+    ::selection {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+@import "./variables";
+
+.container-fluid {
+    min-height: 100vh;
+    background-color: $firstColor;
+
+    @import "./main";
+    @import "./result";
+}

@@ -1,0 +1,91 @@
+main {
+
+    .test-results-container {
+        .false-counter.animate, .true-counter.animate {
+            animation: answer 500ms alternate;
+        }
+    }
+
+    .answer {
+        border: 1px solid #000;
+        width: 20%;
+        cursor: pointer;
+        font-size: 20px;
+        text-align: center;
+        transition: 500ms;
+        padding: 8px;
+
+        span {
+            transition: 500ms;
+        }
+
+        &:hover {
+            background-color: #000;
+
+            span {
+                color: #fff;
+            }
+        }
+    }
+    
+    .is-answer-correct {
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    .butons-container {
+        button {
+            border: none;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: 500ms;
+
+            &:hover {
+                background-color: rgb(161, 161, 161);
+            }
+
+            span {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: green;
+                border: 1px solid gray;
+                justify-self: end;
+                color: #fff;
+                font-weight: 800;
+            }
+        }
+
+        .repeat {
+            span {
+                background-color: crimson;
+            }
+        }
+    }
+}
+
+@keyframes answer {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 992px) {
+    main {
+        .answer {
+            width: 80%;
+            padding: 15px;
+            font-weight: 500;
+        }
+
+        .butons-container {
+            button {
+                padding: 20px;
+                width: 80%;
+            }
+        }
+    }
+}

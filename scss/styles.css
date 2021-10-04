@@ -1,0 +1,120 @@
+* ::-moz-selection {
+  background-color: #000;
+  color: #fff;
+}
+
+* ::selection {
+  background-color: #000;
+  color: #fff;
+}
+
+.container-fluid {
+  min-height: 100vh;
+  background-color: #fff5eb;
+}
+
+.container-fluid main .test-results-container .false-counter.animate, .container-fluid main .test-results-container .true-counter.animate {
+  -webkit-animation: answer 500ms alternate;
+          animation: answer 500ms alternate;
+}
+
+.container-fluid main .answer {
+  border: 1px solid #000;
+  width: 20%;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  padding: 8px;
+}
+
+.container-fluid main .answer span {
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.container-fluid main .answer:hover {
+  background-color: #000;
+}
+
+.container-fluid main .answer:hover span {
+  color: #fff;
+}
+
+.container-fluid main .is-answer-correct h3 {
+  text-transform: uppercase;
+}
+
+.container-fluid main .butons-container button {
+  border: none;
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.container-fluid main .butons-container button:hover {
+  background-color: #a1a1a1;
+}
+
+.container-fluid main .butons-container button span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: green;
+  border: 1px solid gray;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  color: #fff;
+  font-weight: 800;
+}
+
+.container-fluid main .butons-container .repeat span {
+  background-color: crimson;
+}
+
+@-webkit-keyframes answer {
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes answer {
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@media (max-width: 992px) {
+  .container-fluid main .answer {
+    width: 80%;
+    padding: 15px;
+    font-weight: 500;
+  }
+  .container-fluid main .butons-container button {
+    padding: 20px;
+    width: 80%;
+  }
+}
+
+.container-fluid .result-container {
+  background-color: #f67814;
+  padding: 50px;
+  border-radius: 50px 0px 50px 0px;
+}
+
+.container-fluid .result-container h1 {
+  color: #fff5eb;
+}
+/*# sourceMappingURL=styles.css.map */
