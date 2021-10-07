@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <header class="row">
             <div class="col-lg-3 py-2 d-flex justify-content-center">
-                <a href="./index.html"><img src="./img/logo.png" alt=""></a>
+                <a href="./index.html"><img src="./assets/img/logo.png" width="250px" alt=""></a>
             </div>
             <div class="col-lg-6 text-center">
                 <h5>Самопроверка слухового восприятия</h5>
@@ -35,7 +35,7 @@
                     <div class="col">
                         <div class="row test-counter-container text-center mb-4">
                             <h3>Тест</h3>
-                            <h3 id="test-counter">0 из 35</h3>
+                            <h3 id="test-counter">0 из 0</h3>
                         </div>
                         <div class="row test-results-container">
                             <div class="col">
@@ -79,25 +79,41 @@
                             </div>
                         </div>
 
-                        <div class="row butons-container justify-content-center">
+                        <div class="row buttons-container justify-content-center">
                             <div id="playContainer" class="col-lg-3 d-flex justify-content-center py-2">
                                 <button id="play" class="listen mx-3 rounded-3">
                                     <h3>Слушать</h3>
-                                    <span></span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                        </svg>
+                                    </span>
                                 </button>
                             </div>
-                            <div class="col-lg-3 d-flex justify-content-center py-2">
+                            <div id="nextContainer" class="col-lg-3 d-flex justify-content-center py-2">
                                 <button id="next" class="next mx-3 rounded-3">
                                     <h3>Следующий</h3>
-                                    <span></span>
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                        </svg></span>
                                 </button>
                             </div>
-                            <!-- <div class="col-lg-3 d-flex justify-content-center py-2">
-                                <button id="repeat" class="repeat mx-3 rounded-3">
-                                    <h3>Повторить</h3>
-                                    <span></span>
-                                </button>
-                            </div> -->
+                        </div>
+
+                        <div class="row programs text-center">
+                            <h3>Рекомендуем после прохождения мини-курса</h3>
+                            <h3>РЕЧЕВОЙ ЭТИКЕТ</h3>
+                            <p>Если Вы выбрали до 30 ответов правильно
+                                рекомендуем вам воспользоваться программой <br><a href="#">LIGHT</a></p>
+                            <p>Если Вы выбрали от 30 до 45 ответов правильно
+                                рекомендуем вам воспользоваться программой <br><a href="">BASIC</a></p>
+                            <p>Если Вы выбрали 45 и более ответов правильно
+                                у Вас все в порядке с восприятием испанского языка на слух. Рекомендуем просто увеличить
+                                объём общения на испанском.</p>
                         </div>
                     </div>
                 </div>

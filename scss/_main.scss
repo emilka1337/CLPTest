@@ -1,8 +1,39 @@
 main {
 
     .test-results-container {
-        .false-counter.animate, .true-counter.animate {
+
+        .false-counter.animate,
+        .true-counter.animate {
             animation: answer 500ms alternate;
+        }
+
+        .col-lg-6 {
+            h2 {
+                font-size: 100px;
+            }
+
+            .bg-danger {
+                background-color: rgb(238, 0, 0) !important;
+            }
+
+            .bg-success {
+                background-color: rgb(0, 161, 0) !important;
+            }
+        }
+
+        .col-lg-6:nth-child(1) {
+            border-right: 1px solid $secondColor;
+        }
+
+        .col-lg-6:nth-child(2) {
+            border-left: 1px solid $secondColor;
+        }
+
+        @media (max-width: 992px) {
+            .col-lg-6:nth-child(1),
+            .col-lg-6:nth-child(2) {
+                border: 0;
+            }
         }
     }
 
@@ -27,42 +58,56 @@ main {
             }
         }
     }
-    
+
     .is-answer-correct {
         h3 {
             text-transform: uppercase;
         }
     }
 
-    .butons-container {
+    .buttons-container {
         button {
+            color: #fff;
+            background-color: $secondColor !important;
             border: none;
-            width: 250px;
+            // width: 250px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             transition: 500ms;
+            padding: 10px 40px;
 
-            &:hover {
-                background-color: rgb(161, 161, 161);
-            }
+            // &:hover {
+                // background-color: rgb(161, 161, 161);
+            // }
 
-            span {
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                background-color: green;
-                border: 1px solid gray;
-                justify-self: end;
-                color: #fff;
-                font-weight: 800;
-            }
+            // span {
+                // width: 30px;
+                // height: 30px;
+                // border-radius: 50%;
+                // background-color: green;
+                // border: 1px solid gray;
+                // justify-self: end;
+                // color: #fff;
+                // font-weight: 800;
+            // }
         }
 
-        .repeat {
-            span {
-                background-color: crimson;
-            }
+        // .repeat {
+        //     span {
+        //         background-color: crimson;
+        //     }
+        // }
+    }
+
+    .programs {
+        display: none;
+        margin-top: 20px;
+
+        p {
+            width: 70%;
+            margin: auto;
+            font-size: 20px;
         }
     }
 }
@@ -81,7 +126,7 @@ main {
             font-weight: 500;
         }
 
-        .butons-container {
+        .buttons-container {
             button {
                 padding: 20px;
                 width: 80%;

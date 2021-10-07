@@ -13,9 +13,37 @@
   background-color: #fff5eb;
 }
 
-.container-fluid main .test-results-container .false-counter.animate, .container-fluid main .test-results-container .true-counter.animate {
+.container-fluid main .test-results-container .false-counter.animate,
+.container-fluid main .test-results-container .true-counter.animate {
   -webkit-animation: answer 500ms alternate;
           animation: answer 500ms alternate;
+}
+
+.container-fluid main .test-results-container .col-lg-6 h2 {
+  font-size: 100px;
+}
+
+.container-fluid main .test-results-container .col-lg-6 .bg-danger {
+  background-color: #ee0000 !important;
+}
+
+.container-fluid main .test-results-container .col-lg-6 .bg-success {
+  background-color: #00a100 !important;
+}
+
+.container-fluid main .test-results-container .col-lg-6:nth-child(1) {
+  border-right: 1px solid #f67814;
+}
+
+.container-fluid main .test-results-container .col-lg-6:nth-child(2) {
+  border-left: 1px solid #f67814;
+}
+
+@media (max-width: 992px) {
+  .container-fluid main .test-results-container .col-lg-6:nth-child(1),
+  .container-fluid main .test-results-container .col-lg-6:nth-child(2) {
+    border: 0;
+  }
 }
 
 .container-fluid main .answer {
@@ -46,9 +74,10 @@
   text-transform: uppercase;
 }
 
-.container-fluid main .butons-container button {
+.container-fluid main .buttons-container button {
+  color: #fff;
+  background-color: #f67814 !important;
   border: none;
-  width: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,26 +89,18 @@
           justify-content: space-between;
   -webkit-transition: 500ms;
   transition: 500ms;
+  padding: 10px 40px;
 }
 
-.container-fluid main .butons-container button:hover {
-  background-color: #a1a1a1;
+.container-fluid main .programs {
+  display: none;
+  margin-top: 20px;
 }
 
-.container-fluid main .butons-container button span {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: green;
-  border: 1px solid gray;
-  -ms-grid-column-align: end;
-      justify-self: end;
-  color: #fff;
-  font-weight: 800;
-}
-
-.container-fluid main .butons-container .repeat span {
-  background-color: crimson;
+.container-fluid main .programs p {
+  width: 70%;
+  margin: auto;
+  font-size: 20px;
 }
 
 @-webkit-keyframes answer {
@@ -102,19 +123,9 @@
     padding: 15px;
     font-weight: 500;
   }
-  .container-fluid main .butons-container button {
+  .container-fluid main .buttons-container button {
     padding: 20px;
     width: 80%;
   }
-}
-
-.container-fluid .result-container {
-  background-color: #f67814;
-  padding: 50px;
-  border-radius: 50px 0px 50px 0px;
-}
-
-.container-fluid .result-container h1 {
-  color: #fff5eb;
 }
 /*# sourceMappingURL=styles.css.map */

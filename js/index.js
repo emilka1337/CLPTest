@@ -10,6 +10,10 @@ function nextQuestion() {
     createAnswersContainer();
     createPlayButton()
     createAudio();
+
+    if (currentQuestion > 1) {
+        document.querySelector('#playContainer').className = "d-none";
+    }
 }
 
 function createAudio() {
@@ -17,26 +21,26 @@ function createAudio() {
     let audioSrc = QUESTIONS[questionFromArray].src
     let audio = new Audio(audioSrc);
 
-    audioHandler(audio);
+    if (currentQuestion !== 1) {
+        audioHandler(audio);
+    }
+
+    document.querySelector('#play').addEventListener("click", function () {
+        if (currentQuestion === 1) {
+            document.querySelector('#playContainer').className = "";
+            this.style.display = "none";
+            document.querySelector('#nextContainer').className = "col-lg-6 d-flex justify-content-center py-2";
+            audioHandler(audio);
+        }
+    })
 }
 
 function audioHandler(audio) {
-    document.querySelector('#play').addEventListener("click", function () {
-        if (audio.paused) {
-            audio.play();
-            this.children[1].innerHTML = "||";
-        } else {
-            audio.pause();
-            this.children[1].innerHTML = "";
-        }
-
-        let checkIfAudioEndedInterval = setInterval(() => {
-            if (audio.ended) {
-                this.children[1].innerHTML = "";
-                clearInterval(checkIfAudioEndedInterval);
-            }
-        }, 500);
-    });
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
 
     document.querySelector('#next').addEventListener("click", () => {
         audio.pause();
@@ -82,13 +86,15 @@ function correctAnswerChecker(question, variant, answerIndex) {
 
 function createPlayButton() {
     document.querySelector('#playContainer').innerHTML = "";
+    document.querySelector('#playContainer').style.display = "none";
 
     let button = document.createElement("button");
     button.id = "play";
     button.className = "listen mx-3 rounded-3";
 
     let h3 = document.createElement("h3");
-    h3.innerHTML = "Слушать";
+    h3.style.margin = "0";
+    h3.innerHTML = 'Слушать <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" /></svg >';
     let span = document.createElement("span");
 
     button.append(h3)
@@ -116,15 +122,21 @@ function animateResults(correct) {
 }
 
 function finishTest() {
-    let results = {
-        correctAnswers, 
-        falseAnswers, 
-        rate: Math.floor(correctAnswers / QUESTIONS.length * 100)
-    };
+    // let results = {
+    //     correctAnswers,
+    //     falseAnswers,
+    //     rate: Math.floor(correctAnswers / QUESTIONS.length * 100)
+    // };
 
-    sessionStorage.setItem("CLPresults", JSON.stringify(results));
+    // sessionStorage.setItem("CLPresults", JSON.stringify(results));
 
-    location.href = "./results.html"
+    // location.href = "./results.html"
+
+    document.querySelector('.buttons-container').style.display = "none";
+    document.querySelector('.test-answers-container').style.display = "none";
+    document.querySelector('.programs').style.display = "flex";
+    document.querySelector('.test-counter-container>h3:nth-child(1)').style.display = "none";
+    document.querySelector('#test-counter').innerHTML = "Тестирование завершено";
 }
 
 function startTest() {
@@ -140,3 +152,9 @@ document.querySelector('#next').addEventListener("click", () => {
         finishTest();
     }
 });
+
+if (!currentQuestion != 1) {
+    document.querySelector('#play').addEventListener("click", function () {
+        audioHandler();
+    })
+}
