@@ -1,6 +1,6 @@
 const QUESTIONS = [
     {   // Первый вопрос начинается тут
-        src: "assets/audio/0060engl.wav",   // путь к звуковому файлу текущего вопроса
+        src: "assets/audio/0060engl.mp3",   // путь к звуковому файлу текущего вопроса
         answers: [
             {
                 text: "Он неприятный мужчина.",             // Первый вариант ответа к вопросу
@@ -18,7 +18,7 @@ const QUESTIONS = [
 
     },  // Первый вопрос заканчивается тут (не забыть поставить запятую после фигурной скобки)
     {   // Второй вопрос начинается тут
-        src: "assets/audio/0064engl.wav",
+        src: "assets/audio/0064engl.mp3",
         answers: [
             {
                 text: "Эта женщина прекрасно выглядит.",
@@ -35,7 +35,7 @@ const QUESTIONS = [
         ]
     },  // Второй вопрос заканчивается тут (не забыть поставить запятую после фигурной скобки)
     {
-        src: "assets/audio/0067engl.wav",
+        src: "assets/audio/0067engl.mp3",
         answers: [
             {
                 text: "Симона очень стройная, у нее осиная талия.",
@@ -53,7 +53,7 @@ const QUESTIONS = [
 
     },
     {
-        src: "assets/audio/0073engl.wav",
+        src: "assets/audio/0073engl.mp3",
         answers: [
             {
                 text: "Я хочу, чтобы у меня подольше сохранился загар.",
@@ -71,7 +71,7 @@ const QUESTIONS = [
 
     },
     {
-        src: "assets/audio/0089engl.wav",
+        src: "assets/audio/0089engl.mp3",
         answers: [
             {
                 text: "Она выглядит просто прекрасно.",
@@ -89,7 +89,7 @@ const QUESTIONS = [
 
     },
     {
-        src: "assets/audio/0092engl.wav",
+        src: "assets/audio/0092engl.mp3",
         answers: [
             {
                 text: "Вы прекрасно выглядите.",
@@ -106,7 +106,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0124engl.wav",
+        src: "assets/audio/0124engl.mp3",
         answers: [
             {
                 text: "Он просто мерзавец.",
@@ -123,7 +123,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0129engl.wav",
+        src: "assets/audio/0129engl.mp3",
         answers: [
             {
                 text: "Болтуны и лентяи мне не интересны.",
@@ -140,7 +140,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0132engl.wav",
+        src: "assets/audio/0132engl.mp3",
         answers: [
             {
                 text: "Мама очень хорошая хозяйка – она всё успевает.",
@@ -157,7 +157,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0143engl.wav",
+        src: "assets/audio/0143engl.mp3",
         answers: [
             {
                 text: "У нее хороший вкус.",
@@ -174,7 +174,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0208engl.wav",
+        src: "assets/audio/0208engl.mp3",
         answers: [
             {
                 text: "Вы уже были в нашей стране?",
@@ -191,7 +191,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0237engl.wav",
+        src: "assets/audio/0237engl.mp3",
         answers: [
             {
                 text: "Подождите немного!",
@@ -208,7 +208,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0329engl.wav",
+        src: "assets/audio/0329engl.mp3",
         answers: [
             {
                 text: "Сегодня утром море было удивительного зеленого цвета.",
@@ -225,7 +225,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0056engl.wav",
+        src: "assets/audio/0056engl.mp3",
         answers: [
             {
                 text: "Как вам нравится такое занятие?",
@@ -242,7 +242,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0099engl.wav",
+        src: "assets/audio/0099engl.mp3",
         answers: [
             {
                 text: "Он неплохой специалист, и к сожалению, совершенно не понимает в интригах, которые кругом ведутся.",
@@ -259,7 +259,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0174engl.wav",
+        src: "assets/audio/0174engl.mp3",
         answers: [
             {
                 text: "Каковы условия поступления в университет или в институт?",
@@ -276,7 +276,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0190engl.wav",
+        src: "assets/audio/0190engl.mp3",
         answers: [
             {
                 text: "Я отдала своего ребенка в частное учебное заведение.",
@@ -293,7 +293,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0204engl.wav",
+        src: "assets/audio/0204engl.mp3",
         answers: [
             {
                 text: "В свободное время я люблю бывать в библиотеке или театре.",
@@ -310,7 +310,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0215engl.wav",
+        src: "assets/audio/0215engl.mp3",
         answers: [
             {
                 text: "Нет ничего проще!",
@@ -327,7 +327,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0216engl.wav",
+        src: "assets/audio/0216engl.mp3",
         answers: [
             {
                 text: "Во всех кинотеатрах можно входить в зал только перед сеансом.",
@@ -344,7 +344,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0243engl.wav",
+        src: "assets/audio/0243engl.mp3",
         answers: [
             {
                 text: "А мне он не нравится, как композитор, но исполнитель-пианист он просто виртуоз.",
@@ -361,7 +361,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0285engl.wav",
+        src: "assets/audio/0285engl.mp3",
         answers: [
             {
                 text: "В прошлый раз мой брат прекрасно отдохнул в горах.",
@@ -378,7 +378,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0286engl.wav",
+        src: "assets/audio/0286engl.mp3",
         answers: [
             {
                 text: "Мы будем подниматься по горной дороге.",
@@ -395,7 +395,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0293engl.wav",
+        src: "assets/audio/0293engl.mp3",
         answers: [
             {
                 text: "Мои родители проводят отпуск на курорте.",
@@ -412,7 +412,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0294engl.wav",
+        src: "assets/audio/0294engl.mp3",
         answers: [
             {
                 text: "Я люблю плавать в море.",
@@ -429,7 +429,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0296engl.wav",
+        src: "assets/audio/0296engl.mp3",
         answers: [
             {
                 text: "Какие у вас сегодня планы?",
@@ -446,7 +446,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0329engl.wav",
+        src: "assets/audio/0329engl.mp3",
         answers: [
             {
                 text: "Где будут проходить соревнования по конному спорту?",
@@ -463,7 +463,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/3291engl.wav",
+        src: "assets/audio/3291engl.mp3",
         answers: [
             {
                 text: "Примите мои поздравления.",
@@ -480,7 +480,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0336engl.wav",
+        src: "assets/audio/0336engl.mp3",
         answers: [
             {
                 text: "Друзья, какие прекрасные розы вы принесли!",
@@ -497,7 +497,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0353engl.wav",
+        src: "assets/audio/0353engl.mp3",
         answers: [
             {
                 text: "Джо разлил бокал с красным вином прямо на мое новое платье.",
@@ -514,7 +514,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0354engl.wav",
+        src: "assets/audio/0354engl.mp3",
         answers: [
             {
                 text: "Еще не поздно, но нам пора уходить.",
@@ -531,7 +531,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0358engl.wav",
+        src: "assets/audio/0358engl.mp3",
         answers: [
             {
                 text: "Мы хорошо провели время, познакомились с интересными людьми.",
@@ -548,7 +548,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0360engl.wav",
+        src: "assets/audio/0360engl.mp3",
         answers: [
             {
                 text: "Разрешите вас поздравить?",
@@ -565,7 +565,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0377engl.wav",
+        src: "assets/audio/0377engl.mp3",
         answers: [
             {
                 text: "Это довольно трудно, но мы это сделаем.",
@@ -582,7 +582,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0407engl.wav",
+        src: "assets/audio/0407engl.mp3",
         answers: [
             {
                 text: "Я не знаю, но думаю смогу могу вам помочь.",
@@ -599,7 +599,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0021engl.wav",
+        src: "assets/audio/0021engl.mp3",
         answers: [
             {
                 text: "К кому мне подойти?",
@@ -616,7 +616,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0034engl.wav",
+        src: "assets/audio/0034engl.mp3",
         answers: [
             {
                 text: "Помогите мне, пожалуйста, правильно заполнить декларацию",
@@ -633,7 +633,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0034engl.wav",
+        src: "assets/audio/0034engl.mp3",
         answers: [
             {
                 text: "Забронируйте, пожалуйста, номер с ванной в вашей гостинице.",
@@ -650,7 +650,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0436engl.wav",
+        src: "assets/audio/0436engl.mp3",
         answers: [
             {
                 text: "Я вообще-то не люблю тяжелую и жирную пищу.",
@@ -667,7 +667,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0540engl.wav",
+        src: "assets/audio/0540engl.mp3",
         answers: [
             {
                 text: "У вас есть такие же туфли на размер меньше?",
@@ -684,7 +684,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0598engl.wav",
+        src: "assets/audio/0598engl.mp3",
         answers: [
             {
                 text: "Красивые вещи всегда в моде, особенно драгоценности.",
@@ -701,7 +701,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0794engl.wav",
+        src: "assets/audio/0794engl.mp3",
         answers: [
             {
                 text: "Я обладаю хорошими навыками вождения на скоростной трассе.",
@@ -718,7 +718,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0848engl.wav",
+        src: "assets/audio/0848engl.mp3",
         answers: [
             {
                 text: "Мне нужны очки с диоптрией.",
@@ -735,7 +735,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0956engl.wav",
+        src: "assets/audio/0956engl.mp3",
         answers: [
             {
                 text: "Они живут вместе уже восемь лет, у них есть сын, и вот, наконец, они решили пожениться.",
@@ -752,7 +752,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0969engl.wav",
+        src: "assets/audio/0969engl.mp3",
         answers: [
             {
                 text: "Она прекрасная хозяйка и примерная мать.",
@@ -769,7 +769,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/1036engl.wav",
+        src: "assets/audio/1036engl.mp3",
         answers: [
             {
                 text: "Принятие гражданства – это акт, по которому иностранец, проживающий в чужой стране, принимает гражданство данной страны.",
@@ -786,7 +786,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/1294engl.wav",
+        src: "assets/audio/1294engl.mp3",
         answers: [
             {
                 text: "Передайте большой привет коллегам.",
@@ -803,7 +803,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/1323engl.wav",
+        src: "assets/audio/1323engl.mp3",
         answers: [
             {
                 text: "Будьте добры, передайте мне соль.",
@@ -820,7 +820,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/1324engl.wav",
+        src: "assets/audio/1324engl.mp3",
         answers: [
             {
                 text: "Проводите меня, пожалуйста.",
@@ -837,7 +837,7 @@ const QUESTIONS = [
         ]
     },
     {
-        src: "assets/audio/0329engl.wav",
+        src: "assets/audio/0329engl.mp3",
         answers: [
             {
                 text: "Разрешите пригласить вас в кафе?",

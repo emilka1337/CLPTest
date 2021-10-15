@@ -19,13 +19,10 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <header class="row">
-            <div class="col-lg-3 py-2 d-flex justify-content-center">
+            <div class="col-lg-4 py-2 d-flex justify-content-center">
                 <a href="./index.html"><img src="./assets/img/logo.png" width="250px" alt=""></a>
-            </div>
-            <div class="col-lg-6 text-center">
-                <h5>Самопроверка слухового восприятия</h5>
             </div>
         </header>
 
@@ -33,14 +30,17 @@
             <div class="col">
                 <div class="container-md">
                     <div class="col">
-                        <div class="row test-counter-container text-center mb-4">
-                            <h3>Тест</h3>
+                        <div class="row test-name text-center justify-content-center">
+                            <h5>Тест самопроверки слухового восприятия испанского языка</h5>
+                        </div>
+                        <div class="row test-counter-container text-center my-4">
+                            <h3>Вопрос</h3>
                             <h3 id="test-counter">0 из 0</h3>
                         </div>
                         <div class="row test-results-container">
                             <div class="col">
                                 <div class="row text-center">
-                                    <h3 class="mb-0">Ваш результат:</h3>
+                                    <h3 class="mb-0">Выберите правильный перевод</h3>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 text-center false-counter">
@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="row buttons-container justify-content-center">
-                            <div id="playContainer" class="col-lg-3 d-flex justify-content-center py-2">
+                            <div id="playContainer" class="col-lg d-flex justify-content-center py-2">
                                 <button id="play" class="listen mx-3 rounded-3">
                                     <h3>Слушать</h3>
                                     <span>
@@ -92,7 +92,7 @@
                                     </span>
                                 </button>
                             </div>
-                            <div id="nextContainer" class="col-lg-3 d-flex justify-content-center py-2">
+                            <div id="nextContainer" class="col-lg d-flex justify-content-center py-2">
                                 <button id="next" class="next mx-3 rounded-3">
                                     <h3>Следующий</h3>
                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"

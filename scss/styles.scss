@@ -7,10 +7,16 @@
 
 @import "./variables";
 
-.container-fluid {
-    min-height: 100vh;
-    background-color: $firstColor;
 
+body {
+    background-color: $firstColor;
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 900px !important;
+
+    @import "./header";
     @import "./main";
     // @import "./result";
 }
