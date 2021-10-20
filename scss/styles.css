@@ -31,29 +31,29 @@ body {
           animation: answer 500ms alternate;
 }
 
-.container main .test-results-container .col-lg-6 h2 {
-  font-size: 100px;
+.container main .test-results-container .col-lg-3 h2 {
+  font-size: 80px;
 }
 
-.container main .test-results-container .col-lg-6 .bg-danger {
+.container main .test-results-container .col-lg-3 .bg-danger {
   background-color: #ee0000 !important;
 }
 
-.container main .test-results-container .col-lg-6 .bg-success {
+.container main .test-results-container .col-lg-3 .bg-success {
   background-color: #00a100 !important;
 }
 
-.container main .test-results-container .col-lg-6:nth-child(1) {
+.container main .test-results-container .col-lg-3:nth-child(1) {
   border-right: 1px solid #f67814;
 }
 
-.container main .test-results-container .col-lg-6:nth-child(2) {
+.container main .test-results-container .col-lg-3:nth-child(2) {
   border-left: 1px solid #f67814;
 }
 
 @media (max-width: 992px) {
-  .container main .test-results-container .col-lg-6:nth-child(1),
-  .container main .test-results-container .col-lg-6:nth-child(2) {
+  .container main .test-results-container .col-lg-3:nth-child(1),
+  .container main .test-results-container .col-lg-3:nth-child(2) {
     border: 0;
   }
 }
@@ -75,11 +75,7 @@ body {
 }
 
 .container main .answer:hover {
-  background-color: #000;
-}
-
-.container main .answer:hover span {
-  color: #fff;
+  background-color: #faf0a0;
 }
 
 .container main .is-answer-correct h3 {

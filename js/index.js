@@ -1,5 +1,7 @@
 // Механика всего проекта, трогать нежелательно
 
+const ALLOW_REPLAY = true; // настройка возможности прослушивать аудио заново
+
 let currentQuestion = 0;
 let correctAnswers = 0;
 let falseAnswers = 0;
@@ -10,10 +12,6 @@ function nextQuestion() {
     createAnswersContainer();
     createPlayButton()
     createAudio();
-
-    if (currentQuestion > 1) {
-        document.querySelector('#playContainer').className = "d-none";
-    }
 }
 
 function createAudio() {
@@ -26,12 +24,7 @@ function createAudio() {
     }
 
     document.querySelector('#play').addEventListener("click", function () {
-        if (currentQuestion === 1) {
-            document.querySelector('#playContainer').className = "";
-            this.style.display = "none";
-            document.querySelector('#nextContainer').className = "col-lg-6 d-flex justify-content-center py-2";
-            audioHandler(audio);
-        }
+        audioHandler(audio);
     })
 }
 
@@ -41,10 +34,6 @@ function audioHandler(audio) {
     } else {
         audio.pause();
     }
-
-    document.querySelector('#next').addEventListener("click", () => {
-        audio.pause();
-    });
 }
 
 function createAnswersContainer() {
@@ -56,7 +45,7 @@ function createAnswersContainer() {
 
     for (let answerIndex = 0; answerIndex < 3; answerIndex++) {
         let variant = document.createElement("div");
-        variant.className = "row my-3 answer";
+        variant.className = "row my-2 answer";
         variant.innerHTML = `<span>${question.answers[answerIndex].text}</span>`;
 
         correctAnswerChecker(question, variant, answerIndex);
@@ -81,12 +70,21 @@ function correctAnswerChecker(question, variant, answerIndex) {
             animateResults(false)
         }
         refreshPoints();
+        setTimeout(function () {
+            nextQuestion();
+        }, 1000);
     })
 }
 
 function createPlayButton() {
     document.querySelector('#playContainer').innerHTML = "";
-    document.querySelector('#playContainer').style.display = "none";
+    //#region ЭТА ЧАСТЬ ОТВЕЧАЕТ ЗА ВОЗМОЖНОСТЬ ПОВТОРНОГО ПРОСЛУШИВАНИЯ АУДИО
+    if (!ALLOW_REPLAY) {
+        document.querySelector('#playContainer').classList.remove("d-flex");
+        document.querySelector('#playContainer').style.display = "none";
+    }
+    //#endregion
+
 
     let button = document.createElement("button");
     button.id = "play";
@@ -122,15 +120,7 @@ function animateResults(correct) {
 }
 
 function finishTest() {
-    // let results = {
-    //     correctAnswers,
-    //     falseAnswers,
-    //     rate: Math.floor(correctAnswers / QUESTIONS.length * 100)
-    // };
-
-    // sessionStorage.setItem("CLPresults", JSON.stringify(results));
-
-    // location.href = "./results.html"
+    document.querySelector('header').style.display = "";
 
     document.querySelector('.buttons-container').style.display = "none";
     document.querySelector('.test-answers-container').style.display = "none";
@@ -140,21 +130,16 @@ function finishTest() {
 }
 
 function startTest() {
+    document.querySelector('header').style.display = "none";
     nextQuestion();
 }
 
-startTest();
-
-document.querySelector('#next').addEventListener("click", () => {
-    if (currentQuestion < QUESTIONS.length) {
-        nextQuestion();
-    } else {
-        finishTest();
-    }
+document.querySelector('#play').addEventListener('click', () => {
+    startTest();
+    setTimeout(function () {
+        document.querySelector('#play').click();
+    }, 1000);
 });
 
-if (!currentQuestion != 1) {
-    document.querySelector('#play').addEventListener("click", function () {
-        audioHandler();
-    })
-}
+
+document.querySelector('#test-counter').innerHTML = `0 из ${QUESTIONS.length}`;

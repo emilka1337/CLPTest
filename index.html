@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLP</title>
+    <link rel="shortcut icon" href="./favicons.ico"/>
     <link rel="stylesheet" href="./scss/styles.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -24,6 +25,12 @@
             <div class="col-lg-4 py-2 d-flex justify-content-center">
                 <a href="./index.html"><img src="./assets/img/logo.png" width="250px" alt=""></a>
             </div>
+            <div class="col-lg-4 d-flex justify-content-center py-1">
+                <img src="./assets/img/исп-1.png" alt="">
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center py-1">
+                <img src="./assets/img/лого2.png" alt="">
+            </div>
         </header>
 
         <main class="row">
@@ -40,19 +47,19 @@
                         <div class="row test-results-container">
                             <div class="col">
                                 <div class="row text-center">
-                                    <h3 class="mb-0">Выберите правильный перевод</h3>
+                                    <h3 class="mb-5">Выберите правильный перевод</h3>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-6 text-center false-counter">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-3 text-center false-counter">
                                         <h2 id="falseCounter">0</h2>
-                                        <div class="bg-danger text-light py-3 rounded-3">
-                                            <h3>Неправильно</h3>
+                                        <div class="bg-danger text-light py-1 rounded-3">
+                                            <h4>Неправильно</h4>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 text-center true-counter">
+                                    <div class="col-lg-3 text-center true-counter">
                                         <h2 id="trueCounter">0</h2>
-                                        <div class="bg-success text-light py-3 rounded-3">
-                                            <h3>Правильно</h3>
+                                        <div class="bg-success text-light py-1 rounded-3">
+                                            <h4>Правильно</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -61,16 +68,12 @@
 
                         <div class="row test-answers-container">
                             <div class="col py-5">
-                                <div class="row text-center before-start">
-                                    <h3>
-                                        Для начала работы нажмите на кнопку "Слушать"
-                                    </h3>
-                                </div>
                                 <div id="answers" class="row answers">
                                     <div class="col d-flex flex-column align-items-center">
-                                        <div class="row my-3 answer"><span>Ответ 1</span></div>
-                                        <div class="row my-3 answer"><span>Ответ 2</span></div>
-                                        <div class="row my-3 answer"><span>Ответ 3</span></div>
+                                        <h3 class="text-center">Для начала тестирования нажмите кнопку "Слушать"</h3>
+                                        <!-- <div class="row my-2 answer"><span>Ответ 1</span></div>
+                                        <div class="row my-2 answer"><span>Ответ 2</span></div>
+                                        <div class="row my-2 answer"><span>Ответ 3</span></div> -->
                                     </div>
                                 </div>
                                 <div class="row d-none text-center is-answer-correct">
@@ -90,16 +93,6 @@
                                                 d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                                         </svg>
                                     </span>
-                                </button>
-                            </div>
-                            <div id="nextContainer" class="col-lg d-flex justify-content-center py-2">
-                                <button id="next" class="next mx-3 rounded-3">
-                                    <h3>Следующий</h3>
-                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                            fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                                        </svg></span>
                                 </button>
                             </div>
                         </div>
