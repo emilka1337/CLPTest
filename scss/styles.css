@@ -15,6 +15,8 @@ body {
 .container {
   min-height: 100vh;
   max-width: 900px !important;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .container header {
@@ -58,7 +60,12 @@ body {
   }
 }
 
-.container main .answer {
+.container main .answers {
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.container main .answers .answer {
   border: 1px solid #000;
   width: 700px;
   cursor: pointer;
@@ -69,12 +76,12 @@ body {
   padding: 8px;
 }
 
-.container main .answer span {
+.container main .answers .answer span {
   -webkit-transition: 500ms;
   transition: 500ms;
 }
 
-.container main .answer:hover {
+.container main .answers .answer:hover {
   background-color: #faf0a0;
 }
 

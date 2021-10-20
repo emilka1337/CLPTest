@@ -9,6 +9,7 @@ let falseAnswers = 0;
 function nextQuestion() {
     currentQuestion++;
     document.querySelector('#test-counter').innerHTML = `${currentQuestion} из ${QUESTIONS.length}`;
+    
     createAnswersContainer();
     createPlayButton()
     createAudio();
@@ -120,18 +121,27 @@ function animateResults(correct) {
 }
 
 function finishTest() {
-    document.querySelector('header').style.display = "";
-
-    document.querySelector('.buttons-container').style.display = "none";
-    document.querySelector('.test-answers-container').style.display = "none";
-    document.querySelector('.programs').style.display = "flex";
-    document.querySelector('.test-counter-container>h3:nth-child(1)').style.display = "none";
-    document.querySelector('#test-counter').innerHTML = "Тестирование завершено";
+    document.querySelector('.container').style.opacity = 0;
+    setTimeout(function() {
+        
+        document.querySelector('header').style.display = "";
+        
+        document.querySelector('.buttons-container').style.display = "none";
+        document.querySelector('.test-answers-container').style.display = "none";
+        document.querySelector('.programs').style.display = "flex";
+        document.querySelector('.test-counter-container>h3:nth-child(1)').style.display = "none";
+        document.querySelector('#test-counter').innerHTML = "Тестирование завершено";
+        document.querySelector('.container').style.opacity = 1;
+    }, 500);
 }
 
 function startTest() {
-    document.querySelector('header').style.display = "none";
-    nextQuestion();
+    document.querySelector('.container').style.opacity = 0;
+    setTimeout(function() {
+        document.querySelector('header').style.display = "none";
+        nextQuestion();
+        document.querySelector('.container').style.opacity = 1;
+    }, 500);
 }
 
 document.querySelector('#play').addEventListener('click', () => {
