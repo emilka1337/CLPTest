@@ -8,8 +8,9 @@ let falseAnswers = 0;
 
 function nextQuestion() {
     currentQuestion++;
+    console.log(currentQuestion);
     document.querySelector('#test-counter').innerHTML = `${currentQuestion} из ${QUESTIONS.length}`;
-    
+
     createAnswersContainer();
     createPlayButton()
     createAudio();
@@ -58,7 +59,7 @@ function createAnswersContainer() {
 }
 
 function correctAnswerChecker(question, variant, answerIndex) {
-    variant.addEventListener("click", () => {
+    let answerClickHandler = function() {
         if (question.answers[answerIndex].correct) {
             if (correctAnswers + falseAnswers < currentQuestion) {
                 correctAnswers++;
@@ -71,10 +72,19 @@ function correctAnswerChecker(question, variant, answerIndex) {
             animateResults(false)
         }
         refreshPoints();
-        setTimeout(function () {
-            nextQuestion();
-        }, 1000);
-    })
+
+        document.querySelectorAll('.answer').forEach(answer => answer.removeEventListener("click", answerClickHandler));
+
+        if (currentQuestion != 50) {
+            setTimeout(function () {
+                nextQuestion();
+            }, 1000);
+        } else {
+            finishTest();
+        }
+    }
+
+    variant.addEventListener("click", answerClickHandler);
 }
 
 function createPlayButton() {
@@ -122,10 +132,10 @@ function animateResults(correct) {
 
 function finishTest() {
     document.querySelector('.container').style.opacity = 0;
-    setTimeout(function() {
-        
+    setTimeout(function () {
+
         document.querySelector('header').style.display = "";
-        
+
         document.querySelector('.buttons-container').style.display = "none";
         document.querySelector('.test-answers-container').style.display = "none";
         document.querySelector('.programs').style.display = "flex";
@@ -137,7 +147,7 @@ function finishTest() {
 
 function startTest() {
     document.querySelector('.container').style.opacity = 0;
-    setTimeout(function() {
+    setTimeout(function () {
         document.querySelector('header').style.display = "none";
         nextQuestion();
         document.querySelector('.container').style.opacity = 1;
