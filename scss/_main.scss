@@ -1,11 +1,4 @@
 main {
-
-    .test-name {
-        h5 {
-            width: 50%;
-        }
-    }
-
     .test-results-container {
 
         .false-counter.animate,
@@ -13,7 +6,7 @@ main {
             animation: answer 500ms alternate;
         }
 
-        .col-lg-3 {
+        .col-6 {
             h2 {
                 font-size: 80px;
             }
@@ -27,18 +20,18 @@ main {
             }
         }
 
-        .col-lg-3:nth-child(1) {
+        .col-6:nth-child(1) {
             border-right: 1px solid $secondColor;
         }
 
-        .col-lg-3:nth-child(2) {
+        .col-6:nth-child(2) {
             border-left: 1px solid $secondColor;
         }
 
         @media (max-width: 992px) {
 
-            .col-lg-3:nth-child(1),
-            .col-lg-3:nth-child(2) {
+            .col-6:nth-child(1),
+            .col-6:nth-child(2) {
                 border: 0;
             }
         }

@@ -1,3 +1,13 @@
 header {
     border-bottom: 3px solid $secondColor;
+
+    a,
+    a>img, div:nth-child(3)>img {
+        width: 100% !important;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+    }
 }
