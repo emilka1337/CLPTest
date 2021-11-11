@@ -144,7 +144,7 @@ body {
 
 @media (max-width: 992px) {
   .container main .answer {
-    width: 80%;
+    max-width: 100% !important;
     padding: 15px;
     font-weight: 500;
   }
