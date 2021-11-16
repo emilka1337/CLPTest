@@ -28,8 +28,13 @@ body {
   width: 80% !important;
 }
 
+.container header div:nth-child(3) p {
+  font-size: 16px;
+}
+
 .container header div:nth-child(3) h2 {
   font-weight: 400;
+  font-size: 20px;
 }
 
 .container header a {
