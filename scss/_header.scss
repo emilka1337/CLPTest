@@ -2,8 +2,14 @@ header {
     border-bottom: 3px solid $secondColor;
 
     a,
-    a>img, div:nth-child(3)>img {
-        width: 100% !important;
+    a>img {
+        width: 80% !important;
+    }
+
+    div:nth-child(3) {
+        h2 {
+            font-weight: 400;
+        }
     }
 
     a {
