@@ -7,17 +7,55 @@ header {
     }
 
     div:nth-child(3) {
+        display: flex;
+        align-items: center;
+
         p {
             font-size: 16px;
+            margin-right: 20px;
         }
-        h2 {
-            font-weight: 400;
-            font-size: 20px;
-        }
+
+        // h2 {
+        //     font-weight: 400;
+        //     font-size: 20px;
+        // }
     }
 
     a {
         display: flex;
         align-items: center;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header {
+        .col-4 {
+            align-items: center;
+            justify-content: center;
+
+            a {
+                justify-content: center;
+            }
+
+            img {
+                // height: 50px;
+                width: 100% !important;
+            }
+
+            &>img {
+                width: auto !important;
+                height: 50px !important;
+            }
+        }
+
+        .col-4:nth-child(3) {
+            p {
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+        }
     }
 }
