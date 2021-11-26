@@ -9,10 +9,12 @@
 
 
 body {
-    background-color: $firstColor;
+    // background-color: $firstColor;
+    background-color: rgb(200, 200, 200) !important;
 }
 
 .container {
+    background-color: $firstColor;
     min-height: 100vh;
     max-width: 900px !important;
     transition: 500ms;

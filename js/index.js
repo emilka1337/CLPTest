@@ -148,7 +148,7 @@ function finishTest() {
 function startTest() {
     document.querySelector('.container').style.opacity = 0;
     setTimeout(function () {
-        document.querySelector('.test-results-container .row.text-center h3').innerHTML = "Выберите правильный перевод";
+        document.querySelector('.test-answers-container .text-center h5').innerHTML = "Выберите правильный перевод";
         document.querySelector('header').style.display = "none";
         nextQuestion();
         document.querySelector('.container').style.opacity = 1;

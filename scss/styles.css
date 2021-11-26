@@ -9,10 +9,11 @@
 }
 
 body {
-  background-color: #fff5eb;
+  background-color: #c8c8c8 !important;
 }
 
 .container {
+  background-color: #fff5eb;
   min-height: 100vh;
   max-width: 900px !important;
   -webkit-transition: 500ms;
@@ -28,18 +29,8 @@ body {
   width: 80% !important;
 }
 
-.container header div:nth-child(3) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.container header div:nth-child(3) p {
-  font-size: 16px;
-  margin-right: 20px;
+.container header .col-lg-5 p {
+  font-size: 20px;
 }
 
 .container header a {
